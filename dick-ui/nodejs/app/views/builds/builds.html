@@ -15,18 +15,21 @@
                 <div class="col-md-7">
                     <table class="table mg-b-xs table-condensed no-border">
                         <tr>
-                            <td class="text-muted text-right">Repository:</td>
-                            <td>{{project.repository}}</td>
+                            <td class="text-muted text-right no-pd-t no-pd-b">Repository:</td>
+                            <td class="no-pd-t no-pd-b">{{project.repository}}</td>
                         </tr>
                         <tr>
-                            <td class="text-muted text-right">Ref:</td>
-                            <td>{{project.ref}}</td>
+                            <td class="text-muted text-right no-pd-t no-pd-b">Ref:</td>
+                            <td class="no-pd-t no-pd-b">{{project.ref}}</td>
                         </tr>
                         <tr>
-                            <td class="text-muted text-right">Created:</td>
-                            <td>{{project.creationDate| amTimeAgo}}</td>
+                            <td class="text-muted text-right no-pd-t no-pd-b">Created:</td>
+                            <td class="no-pd-t no-pd-b">{{project.creationDate| amTimeAgo}}</td>
                         </tr>
                     </table>
+                </div>
+                <div class="col-md-12" marked="project.description">
+
                 </div>
             </div>
         </header>
@@ -67,9 +70,11 @@
                             <div ng-repeat="stage in build.stages"
                                  ng-class="{'col-lg-12' : build.stages.length === 1,
                  'col-lg-6' : build.stages.length === 2,
-                 'col-lg-4' : build.stages.length > 2,
+                 'col-lg-4' : build.stages.length === 3,
+                 'col-lg-3' : build.stages.length > 3,
                  'col-md-12' : build.stages.length === 1,
-                 'col-md-6' : build.stages.length > 1}"
+                 'col-md-6' : build.stages.length === 2,
+                 'col-md-4' : build.stages.length > 2}"
                             >
                                 <div class="row">
                                     <div class="mg-b-xs">

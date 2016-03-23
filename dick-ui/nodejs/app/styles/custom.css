@@ -148,3 +148,8 @@
 .no-pd-t {
     padding-top: 0 !important;
 }
+
+.output {
+    word-wrap: break-word;
+    font-family: "Ubuntu Mono";
+}
